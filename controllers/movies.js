@@ -33,7 +33,7 @@ module.exports.createMovie = (req, res, next) => {
     nameEN,
   } = req.body;
 
-  const owner = req.user._id; // выяснить про owner!!!!!!!!!!!!
+  const owner = req.user._id;
 
   return movieSchema
     .create({
@@ -63,7 +63,7 @@ module.exports.createMovie = (req, res, next) => {
 };
 
 module.exports.deleteMovie = (req, res, next) => {
-  const { movieId } = req.params; // console.log(req.params) - там некорректные данные
+  const { movieId } = req.params;
 
   movieSchema
     .findById(movieId)
