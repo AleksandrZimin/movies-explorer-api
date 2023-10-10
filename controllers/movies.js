@@ -6,7 +6,7 @@ const Forbidden = require('../errors/Forbidden');
 
 module.exports.getMovies = (req, res, next) => {
   movieSchema
-    .find({})
+    .find({ owner: req.user._id })
     .then((movies) => res.send(movies))
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {
