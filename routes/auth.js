@@ -16,7 +16,7 @@ router.post('/signup', celebrate({
 router.post('/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),
-    password: Joi.string().required().min(8).max(20),
+    password: Joi.string().required().min(6).max(20),
   }),
 }), login);
 
