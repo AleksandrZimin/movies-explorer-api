@@ -62,8 +62,6 @@ module.exports.getUser = (req, res, next) => {
     })
     .catch((err) => next(err));
 };
-
-// module.exports.updateUser = (req, res, next) => {
 //   const { name, email } = req.body;
 //   const userId = req.user._id;
 //   console.log(req.body);
